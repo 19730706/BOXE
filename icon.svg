@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="110" fill="#0b0b0d"/><rect x="44" y="44" width="424" height="424" rx="90" fill="none" stroke="#fff" stroke-width="20"/><text x="256" y="300" font-family="Arial,Helvetica,sans-serif" font-size="112" font-weight="700" text-anchor="middle" fill="#fff">BOXE</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#17171a"/><stop offset="1" stop-color="#050506"/></linearGradient></defs>
+<rect width="512" height="512" rx="110" fill="url(#g)"/>
+<rect x="26" y="26" width="460" height="460" rx="92" fill="none" stroke="#e31b23" stroke-width="18"/>
+<g transform="translate(78 78)">
+<path fill="#e31b23" d="M35 35c28-38 84-32 99 11 7 20 2 43-11 61l-18 26 35 22-33 53-54-34-23 35-45-29 31-47-24-15C-8 94 7 55 35 35z"/>
+<path fill="#b80f16" d="M321 35c-28-38-84-32-99 11-7 20-2 43 11 61l18 26-35 22 33 53 54-34 23 35 45-29-31-47 24-15c24-24 9-63-19-83z"/>
+<path fill="#fff" d="M47 147l66 41-16 26-66-41zm262 0l-66 41 16 26 66-41z"/>
+</g>
+<text x="256" y="444" font-family="Arial,Helvetica,sans-serif" font-size="56" font-weight="900" text-anchor="middle" fill="#fff">BOXE</text>
+</svg>
