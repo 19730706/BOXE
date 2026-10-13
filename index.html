@@ -44,6 +44,17 @@ h1{margin:0;font-size:34px;line-height:1;font-weight:950;letter-spacing:1.5px}
 .badge{font-size:12px;font-weight:900;letter-spacing:1.4px;color:#fff;background:#25252a;padding:7px 10px;border-radius:999px}
 .round-kind{font-size:12px;font-weight:800;color:#ff777c}
 #roundTitle{font-size:28px;font-weight:920;margin:12px 0 0;letter-spacing:-.6px}
+.nextBox{margin-top:10px;padding:11px 13px;border-radius:13px;background:#101012;border:1px solid #25252a;color:#9b9ba3;font-size:13px;font-weight:700}
+.nextBox strong{color:#fff;font-weight:850}
+.progressWrap{height:7px;background:#25252a;border-radius:999px;overflow:hidden;margin:12px 0 2px}
+#progressBar{height:100%;width:0%;background:linear-gradient(90deg,#e31b23,#ff666c);transition:width .2s linear}
+.card.final30 .timerBox{border-color:#6d191d;box-shadow:0 0 0 1px rgba(227,27,35,.22),0 0 30px rgba(227,27,35,.12)}
+.card.final30 #timer{color:#ff4c53}
+.card.resting{background:linear-gradient(180deg,#161a1f,#0f1215)}
+.card.resting .cueBox{border-left-color:#f0b429}
+.card.resting .cueLabel{color:#f0b429}
+.card.resting .timerBox:after{background:linear-gradient(90deg,#f0b429,#ffd166)}
+.card.resting #timer{color:#ffd166}
 .timerBox{position:relative;margin:18px 0 14px;padding:20px 12px 18px;border-radius:22px;background:#0d0d0f;border:1px solid #27272c;text-align:center;overflow:hidden}
 .timerBox:after{content:"";position:absolute;left:0;right:0;bottom:0;height:4px;background:linear-gradient(90deg,var(--red),#ff656b)}
 #timer{font-size:78px;font-weight:950;font-variant-numeric:tabular-nums;letter-spacing:-4px;line-height:1}
@@ -92,6 +103,8 @@ button.primary{background:var(--red);border-color:var(--red);color:#fff;box-shad
     </div>
 
     <div id="roundTitle"></div>
+    <div class="nextBox" id="nextBox">Dopo: <strong>—</strong></div>
+    <div class="progressWrap"><div id="progressBar"></div></div>
 
     <div class="timerBox">
       <div id="timer">03:00</div>
