@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0b0b0d">
+<link rel="manifest" href="manifest.json">
+<title>BOXE</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b0b0d;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif}
+.wrap{max-width:720px;margin:auto;padding:env(safe-area-inset-top) 16px env(safe-area-inset-bottom)}
+header{padding:22px 4px 10px}
+h1{margin:0;font-size:34px;letter-spacing:.5px}
+.muted{color:#92929b}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.tab{padding:14px;border:0;border-radius:15px;background:#242429;color:#fff;font-weight:800;font-size:17px}
+.tab.on{background:#fff;color:#111}
+.card{background:#18181c;border-radius:26px;padding:22px;margin-top:10px;box-shadow:0 8px 30px #0007}
+.badge{font-size:15px;color:#aaa}
+#roundTitle{font-size:27px;font-weight:850;margin:5px 0 0}
+#timer{font-size:78px;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-3px;margin:15px 0}
+#cue{font-size:20px;line-height:1.28;min-height:76px;color:#ddd}
+.controls{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}
+button.ctrl{border:0;border-radius:17px;padding:16px 7px;font-size:17px;font-weight:800;background:#303036;color:#fff}
+button.primary{background:#fff;color:#111}
+.rounds{display:flex;gap:8px;overflow-x:auto;padding:14px 0 6px}
+.pill{flex:0 0 auto;border:0;padding:10px 13px;border-radius:999px;background:#29292f;color:#ddd;font-weight:700}
+.pill.on{background:#fff;color:#111}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><h1>BOXE</h1><div class="muted">Allenamento guidato</div></header>
+<div class="tabs"><button class="tab on" id="day1">Giornata 1</button><button class="tab" id="day2">Giornata 2</button></div>
+<div class="card">
+<div class="badge" id="roundLabel">ROUND 1</div>
+<div id="roundTitle"></div>
+<div id="timer">03:00</div>
+<div id="cue">Premi Avvia.</div>
+<div class="controls">
+<button class="ctrl" id="prev">⏮ Round</button>
+<button class="ctrl" id="back">−15 sec</button>
+<button class="ctrl" id="next">Round ⏭</button>
+<button class="ctrl" id="repeat">🔁 Ripeti</button>
+<button class="ctrl primary" id="play">▶ Avvia</button>
+<button class="ctrl" id="fwd">+15 sec</button>
+</div>
+<div class="rounds" id="rounds"></div>
+</div>
+</div>
+<script src="workout-core.js"></script>
+<script src="audio-intro.js"></script>
+<script src="audio-cues.js"></script>
+<script src="app.js"></script>
+<script>if ('serviceWorker' in navigator) { navigator.serviceWorker.register('./sw.js').catch(()=>{}); }</script>
+</body></html>
